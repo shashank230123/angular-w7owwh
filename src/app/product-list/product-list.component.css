@@ -12,7 +12,7 @@ table {
   width: 100%;
 }
 
-td, table th {
+td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
