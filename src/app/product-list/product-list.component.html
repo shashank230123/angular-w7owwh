@@ -1,4 +1,31 @@
 <h2>Products</h2>
+<div *ngFor = "let product of products">
+  <h4>
+    {{product.name}}
+  </h4>
+</div>
+
+<h2>Customer</h2>
+<table id="customers">
+  <thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+</tr>
+  </thead>
+<tr *ngFor = "let customer of customers">
+<tr>
+<td>{{customer.firstName}}</td>
+<td>{{customer.lastName}}</td>
+<td>{{customer.email}}</td>
+</tr>
+</table>
+
+
+
+
+
 
 
 <!-- 
