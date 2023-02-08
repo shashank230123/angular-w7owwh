@@ -1,0 +1,32 @@
+<p>offer works!</p>
+
+<h2>Customer</h2>
+<table >
+  <thead>
+<tr>
+  <th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Offer/No Offers</th>
+</tr>
+  </thead>
+  <tbody>
+<tr *ngFor = "let customer of customers">
+  <td>{{customer.customerId}}</td>
+<td>{{customer.firstName}}&nbsp;{{customer.lastName}}</td>
+<td>{{customer.email}}</td>
+<td>
+  <p *ngIf = "customer.customerId >10 && customer.customerId<20; else elseBlock"><button type ="button" (click)="offer()">Offer is Available!</button></p>
+  <ng-template #elseBlock><button type="button" (click)="noOffer()">No Offer Available </button></ng-template>
+</td>
+</tr>
+  </tbody>
+</table>
+
+<!-- <p *ngIf="product && product.price > 700">
+  <button type="button">Notify Me</button>
+</p>
+
+
+<div *ngIf="condition as value; else elseBlock">{{value}}</div>
+<ng-template #elseBlock>Content to render when value is null.</ng-template> -->

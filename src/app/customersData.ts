@@ -1,3 +1,9 @@
+export interface customers {
+  customerId:number;
+  firstName:string;
+  lastName:string;
+  email:string;
+}
 export const customers =[
   {
       "customerId": 1,
