@@ -1,6 +1,4 @@
-<p>offer works!</p>
 
-<h2>Customer</h2>
 <table >
   <thead>
 <tr>
@@ -13,7 +11,11 @@
   <tbody>
 <tr *ngFor = "let customer of customers">
   <td>{{customer.customerId}}</td>
-<td>{{customer.firstName}}&nbsp;{{customer.lastName}}</td>
+<td><a [title]="customer.firstName" 
+  [routerLink]="['/customers',customer.customerId]" >
+  {{customer.firstName}}&nbsp;{{customer.lastName}}
+</a>
+</td>
 <td>{{customer.email}}</td>
 <td>
   <p *ngIf = "customer.customerId >10 && customer.customerId<20; else elseBlock"><button type ="button" (click)="offer()">Offer is Available!</button></p>

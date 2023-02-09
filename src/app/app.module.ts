@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { OfferComponent } from './offer/offer.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 @NgModule({
   imports: [
@@ -14,13 +15,15 @@ import { OfferComponent } from './offer/offer.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      {path : 'customers/:customerId', component:CustomerDetailComponent}
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    OfferComponent
+    OfferComponent,
+    CustomerDetailComponent
   ],
   bootstrap: [
     AppComponent
