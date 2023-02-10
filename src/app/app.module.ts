@@ -15,7 +15,7 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      {path : 'customers/:customerId', component:CustomerDetailComponent}
+      {path : 'customers/:customerId',component:CustomerDetailComponent}
     ])
   ],
   declarations: [

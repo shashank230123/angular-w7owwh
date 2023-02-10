@@ -1,1 +1,6 @@
-<p>customer-detail works!</p>
+<h1>Customer Details Page</h1>
+
+<div *ngIf = "customer">
+  <h1>{{customer.customerId}}&nbsp;{{customer.firstName}}&nbsp;{{customer.lastName}}</h1>
+  <h2>{{customer.email}}</h2>
+</div>
